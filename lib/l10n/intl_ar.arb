@@ -1,0 +1,13 @@
+{
+    "homeTitle":"الملاحظات",
+    "editNote":"تعديل الملاحظة",
+    "addNote":"اضافة ملاحظة",
+    "stringLangKey":"English",
+    "deleteMessage":"هل تريد حذف هذه الملاحظة؟",
+    "editMessage":"هل تريد تعديل هذه الملاحظة؟",
+    "addMessage":"هل تريد حفظ هذه الملاحظة؟",
+    "save":"حفظ",
+    "discard":"تجاهل",
+    "edit":"تعديل",
+    "delete":"حذف"
+}
