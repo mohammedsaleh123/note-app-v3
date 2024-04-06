@@ -1,4 +1,4 @@
-# noteapp 📔
+# flutter note app 📔
 
 A Note App Flutter project for create and update and delete notes with english and arabic language.
 
