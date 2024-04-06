@@ -1,9 +1,9 @@
 import 'package:figmanoteapp/core/route/route_strings.dart';
-import 'package:figmanoteapp/features/home/bussenes_logic/cubit/note_cubit.dart';
-import 'package:figmanoteapp/features/home/presentation/views/add_note/add_note_view.dart';
-import 'package:figmanoteapp/features/home/presentation/views/edit_note/edit_note_view.dart';
-import 'package:figmanoteapp/features/home/presentation/views/home/home_view.dart';
-import 'package:figmanoteapp/features/home/presentation/views/search/search_view.dart';
+import 'package:figmanoteapp/features/bussenes_logic/cubit/note_cubit.dart';
+import 'package:figmanoteapp/features/add_note/add_note_view.dart';
+import 'package:figmanoteapp/features/edit_note/edit_note_view.dart';
+import 'package:figmanoteapp/features/home/home_view.dart';
+import 'package:figmanoteapp/features/search/search_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

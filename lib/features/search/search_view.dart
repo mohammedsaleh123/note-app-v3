@@ -1,6 +1,6 @@
 import 'package:figmanoteapp/core/app/widgets/custom_text_field.dart';
-import 'package:figmanoteapp/features/home/bussenes_logic/cubit/note_cubit.dart';
-import 'package:figmanoteapp/features/home/presentation/views/home/widgets/note_item.dart';
+import 'package:figmanoteapp/features/bussenes_logic/cubit/note_cubit.dart';
+import 'package:figmanoteapp/features/home/widgets/note_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 

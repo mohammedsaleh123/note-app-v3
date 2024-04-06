@@ -1,6 +1,6 @@
 import 'package:figmanoteapp/core/services/database_services.dart';
 import 'package:figmanoteapp/core/services/service_locator.dart';
-import 'package:figmanoteapp/features/home/data/models/note_model.dart';
+import 'package:figmanoteapp/features/data/models/note_model.dart';
 
 class NoteRepo {
   Future<bool> createDatabase(String databaseTable) async {

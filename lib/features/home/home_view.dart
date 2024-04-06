@@ -1,11 +1,11 @@
 import 'package:figmanoteapp/core/app/bussenes_logic/cubit/app_cubit.dart';
 import 'package:figmanoteapp/core/extensions/padding_extension.dart';
 import 'package:figmanoteapp/core/route/route_strings.dart';
-import 'package:figmanoteapp/features/home/bussenes_logic/cubit/note_cubit.dart';
-import 'package:figmanoteapp/features/home/presentation/views/home/widgets/empty_widget.dart';
-import 'package:figmanoteapp/features/home/presentation/views/home/widgets/fab.dart';
-import 'package:figmanoteapp/features/home/presentation/views/home/widgets/note_item.dart';
-import 'package:figmanoteapp/features/home/presentation/widgets/custom_appbar.dart';
+import 'package:figmanoteapp/features/bussenes_logic/cubit/note_cubit.dart';
+import 'package:figmanoteapp/features/home/widgets/empty_widget.dart';
+import 'package:figmanoteapp/features/home/widgets/fab.dart';
+import 'package:figmanoteapp/features/home/widgets/note_item.dart';
+import 'package:figmanoteapp/core/app/widgets/custom_appbar.dart';
 import 'package:figmanoteapp/generated/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

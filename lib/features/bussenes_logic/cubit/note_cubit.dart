@@ -1,7 +1,7 @@
 import 'package:figmanoteapp/core/services/service_locator.dart';
 import 'package:figmanoteapp/core/utils/app_colors.dart';
-import 'package:figmanoteapp/features/home/data/models/note_model.dart';
-import 'package:figmanoteapp/features/home/data/repository/note_repo.dart';
+import 'package:figmanoteapp/features/data/models/note_model.dart';
+import 'package:figmanoteapp/features/data/repository/note_repo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';

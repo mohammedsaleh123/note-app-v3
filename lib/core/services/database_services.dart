@@ -1,4 +1,4 @@
-import 'package:figmanoteapp/features/home/data/models/note_model.dart';
+import 'package:figmanoteapp/features/data/models/note_model.dart';
 import 'package:sqflite/sqflite.dart';
 
 class DatabaseServices {
