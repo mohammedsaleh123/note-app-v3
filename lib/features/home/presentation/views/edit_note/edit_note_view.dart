@@ -14,14 +14,17 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: must_be_immutable
 class EditNoteView extends StatefulWidget {
-  const EditNoteView(
-      {super.key,
-      required this.title,
-      required this.content,
-      required this.index});
+  const EditNoteView({
+    super.key,
+    required this.title,
+    required this.content,
+    required this.index,
+    required this.colorIndex,
+  });
   final String title;
   final String content;
   final int index;
+  final int colorIndex;
 
   @override
   State<EditNoteView> createState() => _EditNoteViewState();
@@ -31,8 +34,8 @@ class _EditNoteViewState extends State<EditNoteView> {
   @override
   void initState() {
     super.initState();
-    BlocProvider.of<NoteCubit>(context)
-        .moveTitleAndContentTextToEdit(widget.title, widget.content);
+    BlocProvider.of<NoteCubit>(context).moveTitleAndContentTextToEdit(
+        widget.title, widget.content, widget.colorIndex);
   }
 
   @override
@@ -84,6 +87,7 @@ class _EditNoteViewState extends State<EditNoteView> {
                                     title: cubit.editTitleController.text,
                                     content: cubit.editContentController.text,
                                     id: widget.index,
+                                    colorIndex: widget.colorIndex,
                                   ),
                                 );
                                 Navigator.pushReplacementNamed(context, home);

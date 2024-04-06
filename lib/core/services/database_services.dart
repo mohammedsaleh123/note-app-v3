@@ -11,7 +11,8 @@ class DatabaseServices {
 create table ${NoteField.tableName} ( 
   ${NoteField.id} integer primary key autoincrement, 
   ${NoteField.title} text,
-  ${NoteField.content} integer not null)
+  ${NoteField.content} text,
+  ${NoteField.colorIndex} integer)
 ''');
     });
   }

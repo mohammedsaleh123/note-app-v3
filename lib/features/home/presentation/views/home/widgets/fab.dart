@@ -1,3 +1,4 @@
+import 'package:figmanoteapp/core/extensions/padding_extension.dart';
 import 'package:figmanoteapp/core/route/route_strings.dart';
 import 'package:figmanoteapp/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
@@ -26,12 +27,12 @@ class FAB extends StatelessWidget {
               color: deepBlack,
               blurRadius: 5.sp,
               spreadRadius: 0.5.sp,
-              offset: const Offset(5, 5),
+              offset: const Offset(3, 3),
             )
           ],
         ),
         child: const Icon(Icons.add),
       ),
-    );
+    ).padding(25.w, 25.h);
   }
 }

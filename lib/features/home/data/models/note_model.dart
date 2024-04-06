@@ -4,19 +4,22 @@ class NoteField {
   static const String id = 'id';
   static const String title = 'title';
   static const String content = 'content';
+  static const String colorIndex = 'colorIndex';
 
-  static List<String> values() => [id, title, content];
+  static List<String> values() => [id, title, content, colorIndex];
 }
 
 class NoteModel {
   late final int? id;
   final String title;
   final String content;
+  final int colorIndex;
 
   NoteModel({
     this.id,
     required this.title,
     required this.content,
+    required this.colorIndex,
   });
 
   Map<String, dynamic> toMap() {
@@ -24,6 +27,7 @@ class NoteModel {
       'id': id,
       'title': title,
       'content': content,
+      'colorIndex': colorIndex,
     };
   }
 
@@ -32,6 +36,7 @@ class NoteModel {
       id: map['id'] != null ? map['id'] as int : null,
       title: map['title'] as String,
       content: map['content'] as String,
+      colorIndex: map['colorIndex'] != null ? map['colorIndex'] as int : 0,
     );
   }
 
@@ -39,11 +44,13 @@ class NoteModel {
     int? id,
     String? title,
     String? content,
+    int? colorIndex,
   }) {
     return NoteModel(
       id: id ?? this.id,
       title: title ?? this.title,
       content: content ?? this.content,
+      colorIndex: colorIndex ?? this.colorIndex,
     );
   }
 }

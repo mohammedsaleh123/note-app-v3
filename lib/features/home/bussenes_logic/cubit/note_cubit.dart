@@ -1,10 +1,12 @@
 import 'package:figmanoteapp/core/services/database_services.dart';
 import 'package:figmanoteapp/core/services/service_locator.dart';
+import 'package:figmanoteapp/core/utils/app_colors.dart';
 import 'package:figmanoteapp/features/home/data/models/note_model.dart';
 import 'package:figmanoteapp/features/home/data/repository/note_repo.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'dart:math';
 part 'note_state.dart';
 
 class NoteCubit extends Cubit<NoteState> {
@@ -16,9 +18,8 @@ class NoteCubit extends Cubit<NoteState> {
   TextEditingController editTitleController = TextEditingController();
   TextEditingController editContentController = TextEditingController();
   TextEditingController searchByTitleController = TextEditingController();
-
-  DatabaseServices databaseServices = DatabaseServices();
   List<NoteModel> notes = [];
+  int? colorIndex;
 
   Future<void> createDatabase() async {
     emit(CreateDatabaseLoading());
@@ -42,6 +43,7 @@ class NoteCubit extends Cubit<NoteState> {
         NoteModel(
           title: title,
           content: content,
+          colorIndex: Random().nextInt(colors.length),
         ),
       );
       getNotes();
@@ -101,7 +103,8 @@ class NoteCubit extends Cubit<NoteState> {
     }
   }
 
-  void moveTitleAndContentTextToEdit(String title, String content) {
+  void moveTitleAndContentTextToEdit(
+      String title, String content, int colorIndex) {
     emit(MoveTitleAndContentTextToEditLoading());
     editTitleController = TextEditingController();
     editContentController = TextEditingController();

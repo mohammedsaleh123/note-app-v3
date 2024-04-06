@@ -43,23 +43,29 @@ class NoteItem extends StatelessWidget {
         ),
       ),
       child: ListTile(
-        tileColor: deepGrey,
+        tileColor: colors[cubit.notes[index].colorIndex],
         shape:
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.sp)),
         title: Text(
           cubit.notes[index].title,
           style: whiteTextStyle().copyWith(
+            color: black,
             fontSize: 24.sp,
           ),
         ).padding(30.w, 30.h),
         onTap: () {
-          cubit.moveTitleAndContentTextToEdit(
-              cubit.notes[index].title, cubit.notes[index].content);
-          Navigator.pushNamed(context, editNote, arguments: [
-            cubit.notes[index].title,
-            cubit.notes[index].content,
-            cubit.notes[index].id,
-          ]);
+          cubit.moveTitleAndContentTextToEdit(cubit.notes[index].title,
+              cubit.notes[index].content, cubit.notes[index].colorIndex);
+          Navigator.pushNamed(
+            context,
+            editNote,
+            arguments: [
+              cubit.notes[index].title,
+              cubit.notes[index].content,
+              cubit.notes[index].id,
+              cubit.notes[index].colorIndex,
+            ],
+          );
         },
       ).padding(24.w, 12.h),
       confirmDismiss: (direction) {

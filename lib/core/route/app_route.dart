@@ -29,6 +29,7 @@ class AppRoute {
         final title = args[0];
         final content = args[1];
         final index = args[2];
+        final colorIndex = args[3];
         return MaterialPageRoute(
           builder: (context) => BlocProvider.value(
             value: NoteCubit(),
@@ -36,6 +37,7 @@ class AppRoute {
               title: title,
               content: content,
               index: index,
+              colorIndex: colorIndex,
             ),
           ),
         );
